@@ -1,0 +1,50 @@
+{
+  "name": "blog.skydown",
+  "version": "1.0.0",
+  "description": "blog.skydown of Skydown",
+  "main": "public_dev/src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-stage-2": "^7.0.0",
+    "autoprefixer": "^9.2.0",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.2",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "vue": "^2.5.17",
+    "vue-google-adsense": "^1.2.0",
+    "vue-loader": "^15.4.2",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.17",
+    "vuex": "^3.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^5.4.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --progress",
+    "build": "rimraf public && webpack --mode production --progress --hide-modules"
+  },
+  "author": "skydown <star4899@naver.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/star4899/blog.git"
+  },
+  "homepage": "https://github.com/star4899/blog#readme"
+}

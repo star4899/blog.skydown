@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="cMC81qfLT0dD0oCHakXiUH8ECM_vBrf-NTauI3Fi-T0" />
+<meta name="naver-site-verification" content="7fe905a5b8df3c4c7e8198beafcb022befbf91f3"/>
+<meta name="fragment" content="!">
+<meta name="theme-color" content="#3f87a6">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, email=no, address=no">
+<title>blog.skydown</title>
+<link rel="canonical" href="https://blog.skydown.co.kr">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/src/images/favicon-152.png">
+<link rel="shortcut icon" href="/src/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/src/style/blog.css">
+<script>
+window.recaptchaCallback = function(){
+    console.log("recaptchaCallback");
+};
+window.recaptchaExpiredCallback = function(){
+    console.log("recaptchaExpiredCallback");
+};
+window.recaptchaErrorCallback = function(){
+    console.log("recaptchaErrorCallback");
+};
+window.grecaptchaOBJ = null;
+window.onloadCallback = function(){
+    const recaptchaOBJECT = document.querySelector("#recaptcha");
+    if(recaptchaOBJECT){
+        if(window.grecaptchaOBJ === null){
+            window.grecaptchaOBJ = 0;
+            window.grecaptchaOBJ = window.grecaptcha.render("recaptcha", {
+                "sitekey" : "6LdWTkwUAAAAACivmtEc3nfpHDJAWU4tQRvKFW5-",
+                "callback" : recaptchaCallback,
+                "expired-callback" : recaptchaExpiredCallback,
+                "error-callback" : recaptchaErrorCallback
+            });
+        };
+    };
+};
+</script>
+</head>
+<body>
+    <section id="wrap"></section>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="/src/blog.js"></script>
+</body>
+</html>

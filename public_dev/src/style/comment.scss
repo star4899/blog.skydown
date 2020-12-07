@@ -1,0 +1,49 @@
+@mixin comment{
+    @content;
+    .comment_top{position:absolute; left:0; top:0; height:27px; padding:18px 5px 0;
+        span{margin-left:10px; vertical-align:middle;
+            &:first-child{margin-left:0;}
+            &.author{font-weight:bold;}
+            &.origin_user{color:#ccc;
+                &::before{margin-right:5px; content:"@";}
+            }
+        }
+        time{margin-left:10px; color:#bbb; transition:background-color .8s, color .6s;}
+        label{font-weight:bold;}
+        input{height:30px; padding:0 5px; margin-left:10px; border:1px solid #ccc; line-height:30px; vertical-align:middle;}
+    }
+    .comment_bottom{overflow:hidden;
+        &.deleted{padding-top:40px;}
+    }
+    .comment_bottom_top{display:flex; justify-content:flex-end; margin-bottom:10px;
+        button{height:30px; padding:0 10px; margin-left:5px; border:1px solid #444; font-family:xeicon; font-size:12px; color:#444;
+            &.reply, &:hover{background:#444; border-color:#444; color:#fff;
+                &::before{background:#444; color:#fff;}
+            }
+            &::before{font-size:16px; vertical-align:middle;}
+            span{margin-left:3px; vertical-align:middle;}
+        }
+        label{margin-left:5px;}
+        input{width:200px; height:30px; padding:0 0 0 5px; margin-left:5px; background:#eefaff; border:1px dashed #ccc; box-sizing:border-box; color:#444; vertical-align:middle;
+            &::-webkit-input-placeholder{color:rgba(68,68,68,.6);}
+            &:focus::-webkit-input-placeholder{color:rgba(68,68,68,1);}
+        }
+    }
+    .comment_bottom_bottom{
+        .oldAuthor{float:left; padding:10px 10px 0 10px; color:#aaa;}
+        .comment_body{min-height:20px; padding:10px; background:#f0f0f0; word-break:break-word; word-wrap:break-word; transition:background-color .8s, color .6s;
+            &.deleted{min-height:20px; padding:10px; background:#f0f0f0; word-break:break-word; word-wrap:break-word;}
+        }
+        textarea{width:100%; max-height:300px; min-height:75px; padding:10px; background:#eefaff; border:0; outline:1px dashed #ccc; outline-offset:-1px; box-sizing:border-box; font-size:12px; color:#444; resize:none; vertical-align:top;}
+    }
+    @media screen and (max-width:1023px){
+        .comment_bottom.deleted{padding-top:0;}
+        .comment_bottom_top{display:block;
+            label{display:block; margin-bottom:10px; margin-left:0;
+                span{position:absolute; left:-10000em; top:0;}
+                input{width:100%; margin-left:0;}
+            }
+            & > span{overflow:hidden; display:block; text-align:right;}
+        }
+    }
+}

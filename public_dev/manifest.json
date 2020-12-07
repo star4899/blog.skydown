@@ -1,0 +1,20 @@
+{
+	"name": "blog.skydown",
+	"short_name": "skydown",
+	"icons": [
+		{
+			"src": "/src/images/blog-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/src/images/blog-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#3f87a6",
+	"background_color": "#3f87a6",
+	"start_url": "https://blog.skydown.co.kr",
+	"display": "standalone"
+}

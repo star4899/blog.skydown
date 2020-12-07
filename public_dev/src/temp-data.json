@@ -1,0 +1,119 @@
+{
+	"csrfToken":"mOSvs9c3-btS85mzbHrLoLSscC-DjboP2_P4",
+	"redirect":false,
+	"loginState":true,
+	"isScroll":true,
+	"page":1,
+	"status":200,
+	"type":"list",
+	"total":44,
+	"post":[
+		{
+			"images":[],
+			"files":[{"registered":"false","fileName":"1531845401756.html","fileOriginName":"array.html","size":"629"}],
+			"fixed":false,
+			"complete":true,
+			"auth":true,
+			"reply":[
+				{
+					"slave":[
+						{
+						"_id":"5b4e1b804b3ad30934129cdc",
+						"idx":1,
+						"name":"skydown",
+						"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+						"content":"코드하이라이트 수정1",
+						"originUser":"111111111",
+						"view":true,
+						"date":"2018-07-18T16:38:24.926Z"
+						},
+						{
+						"_id":"5b4e1b804b3ad30934129cdc",
+						"idx":2,
+						"name":"skydown",
+						"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+						"content":"코드하이라이트 수정2",
+						"originUser":"111111111",
+						"view":false,
+						"date":"2018-07-18T16:38:24.926Z"
+						},
+						{
+						"_id":"5b4e1b804b3ad30934129cdc",
+						"idx":3,
+						"name":"skydown",
+						"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+						"content":"코드하이라이트 수정3",
+						"originUser":"111111111",
+						"view":true,
+						"date":"2018-07-18T16:38:24.926Z"
+						}
+					],
+					"_id":"5b4dc0a24b3ad30934129cda",
+					"idx":1,
+					"name":"111111111",
+					"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+					"content":"어라 for문에 쎄미콜론이 이상한데 찍혔다 ㅠㅠ<br>여러모로 엉망인 하루네.<br>코드하이라이트도 다시 손 봐야 할 듯 하네",
+					"view":true,
+					"date":"2018-07-17T10:10:42.669Z",
+					"updateDate":"2018-07-18T15:52:31.753Z"
+				},
+				{
+					"slave":[
+						{
+						"_id":"5b4e1b804b3ad30934129cdc",
+						"idx":1,
+						"name":"skydown",
+						"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+						"content":"코드하이라이트 수정1",
+						"originUser":"2222222222",
+						"view":true,
+						"date":"2018-07-18T16:38:24.926Z"
+						},
+						{
+						"_id":"5b4e1b804b3ad30934129cdc",
+						"idx":2,
+						"name":"skydown",
+						"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+						"content":"코드하이라이트 수정2",
+						"originUser":"2222222222",
+						"view":true,
+						"date":"2018-07-18T16:38:24.926Z"
+						},
+						{
+						"_id":"5b4e1b804b3ad30934129cdc",
+						"idx":3,
+						"name":"skydown",
+						"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+						"content":"코드하이라이트 수정3",
+						"originUser":"2222222222",
+						"view":true,
+						"date":"2018-07-18T16:38:24.926Z"
+						}
+					],
+					"_id":"5b4dc0a24b3ad30934129cda",
+					"idx":2,
+					"name":"2222222222",
+					"password":"CsJi6tnZJoZ4g1jxhv1Prqh6ATAJaqo1G0ZPpvNqR8urE4Y1I8paG7F3QQ76K0Plvv18Ac/ZIADnGsf+gX4+WA==",
+					"content":"어라 for문에 쎄미콜론이 이상한데 찍혔다 ㅠㅠ<br>여러모로 엉망인 하루네.<br>코드하이라이트도 다시 손 봐야 할 듯 하네",
+					"view":false,
+					"date":"2018-07-17T10:10:42.669Z",
+					"updateDate":"2018-07-18T15:52:31.753Z"
+				}
+			],
+			"_id":"5b4d99f84b3ad30934129cd9",
+			"idx":36,
+			"title":"배열 순회",
+			"content":"L사 면접에서 진행된 라이브 코딩 문제 입니다.어렵진 않은거 같은데 이미 사전 질문들에서 머리가 하얗게 변해버려서 풀지 못한 ㅠㅠ문제 (실제 문제와 동일하지 않습니다.)var input = [1, undefined, [2, [3, 4, [5, 6]]], NaN, 7, {a:\"b\"}, 8];function func(arr){return arr;};console.log(func(input));// output// [1, undefined, 2, 3, 4, 5, 6, NaN, 7, {a:\"b\"}, 8];func() 함수 안에 output 값을 낼 수 있도록 로직을 완성 하시오!배열을 순회하며 객체 타입을 체크하고 새로운 배열에 할당하여 리턴 하면 될것 같았습니다. 는 머리 속 생각 뿐.....변명은 긴장한 탓 ㅠㅠ...... 제가 이정도 실력이 밖에 안되네요풀이 (이게 답인지 아닌지는 모르겠네요 -0-)var input = [1, undefined, [2, [3, 4, [5, 6]]], NaN, 7, {a:\"b\"}, 8];function func(arr){var tempArr = [];function arrLoop(item){var itemLength = item.Length;for(var i = 0; i &lt; itemLength; i++){if(typeof item[i] === \"object\" &amp;&amp; item[i].length){// item[i]의 타입이 object이며, length property를 가지고 있는지 확인// Array와 Object의 타입은 둘 다 object 이기에 length property가 있는지 한번 더 체크 하여 Array를 구분합니다.arrLoop(item[i]);// 조건에 맞다면 Array 이므로 arrLoop 함수 재귀 호출// arrLoop 를 재귀 호출하면 새로운 스코프가 생성되어 기존에 호출한 함수와 별개로 동작합니다.}else{tempArr.push(item[i]);// 조건이 맞지 않는 다면 임시 변수에 할당};};};arrLoop(arr);var arr = tempArr;// 임시 변수를 arr 변수에 재 할당return arr;};집에선 5분도 안 걸렸는데 라이브 코딩 땐 머리가 백지였을까요???????????전 정말이지 시험에 너무 너무 약하네요.&nbsp;아무튼 후회가 밀려오는 면접/테스트네요.",
+			"author":"skydown",
+			"category":"back-end",
+			"subCategory":"IIS",
+			"ip":"2ST9Lj0quGUoyMm1+oEYzFb02PRLWIVy17Kkpx7tsX1PpahrX2KQnBiztD4fW/EiKl7GcxoaqbLERdTqEcb7IQ==",
+			"view":true,
+			"date":"2018-07-17T07:25:44.306Z",
+			"__v":6,
+			"updateDate":"2018-07-18T16:36:44.524Z"
+		},
+		{"images":[{"registered":"false","imgName":"1536006655371.jpg"}],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[{"slave":[{"_id":"5b8abf9f0ee1bb08cc419168","idx":1,"name":"11","password":"Y/EuTUYRJt/Q+HOHPJ0Kdx4b4+6TT9189DpFXGvk6nblFWpm3CZyQ9opDhIenwX8azImsP41HQszxkInr7FoVQ==","content":"1231231","originUser":"11","view":true,"date":"2018-09-02T16:34:39.423Z"}],"_id":"5b8abf990ee1bb08cc419167","idx":1,"name":"11","password":"Y/EuTUYRJt/Q+HOHPJ0Kdx4b4+6TT9189DpFXGvk6nblFWpm3CZyQ9opDhIenwX8azImsP41HQszxkInr7FoVQ==","content":"12312","view":true,"date":"2018-09-02T16:34:33.692Z"},{"slave":[{"_id":"5b8abfac0ee1bb08cc41916a","idx":1,"name":"22","password":"5wHVvIH4LlW5AItMrZ0icooILVXY3MQ8Zweb0QnDIewZw7jGZzBX4Z2L3D+fwxzEXaAFuubXrmQeSfH0Aetq8w==","content":"22","originUser":"22","view":true,"date":"2018-09-02T16:34:52.333Z"}],"_id":"5b8abfa50ee1bb08cc419169","idx":2,"name":"22","password":"5wHVvIH4LlW5AItMrZ0icooILVXY3MQ8Zweb0QnDIewZw7jGZzBX4Z2L3D+fwxzEXaAFuubXrmQeSfH0Aetq8w==","content":"22222","view":true,"date":"2018-09-02T16:34:45.312Z"}],"_id":"5b7d50ffa00c882870f183b6","idx":48,"title":"asda","content":"asdasdadasdasdasdasdasasdasda","author":"skydown","category":"front-end","subCategory":"css","ip":"8agVS0uWXQYcKOc4PZR3GU5utgxJqiD8s5DFTJHLOZOhKCbldaBoBg/SZAAUuDoyTndqnMnxxYxMF80DGcEJBQ==","view":true,"date":"2018-08-22T12:03:11.641Z","__v":5,"updateDate":"2018-09-04T20:30:59.650Z"},{"images":[],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[],"_id":"5b77b6e11be4332fbc7055a2","idx":47,"title":"asdas","content":"dasdasdasdadasdasdasdasdasdasdasdasdasdasdasdasda","author":"skydown","category":"time-line","subCategory":"","ip":"8agVS0uWXQYcKOc4PZR3GU5utgxJqiD8s5DFTJHLOZOhKCbldaBoBg/SZAAUuDoyTndqnMnxxYxMF80DGcEJBQ==","view":true,"date":"2018-08-18T06:04:17.686Z","__v":0},{"images":[],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[],"_id":"5b77b57a1be4332fbc7055a1","idx":46,"title":"test","content":"asdasdasdasdadasdasdasasdasdasdasdadasdasdasasdasdasdasdadasdasdasasdasdasdasdadasdasdasasdasdasdasdadasdasdasvar a = 1;","author":"skydown","category":"time-line","subCategory":"","ip":"8agVS0uWXQYcKOc4PZR3GU5utgxJqiD8s5DFTJHLOZOhKCbldaBoBg/SZAAUuDoyTndqnMnxxYxMF80DGcEJBQ==","view":true,"date":"2018-08-18T05:58:18.458Z","__v":0,"updateDate":"2018-08-22T12:02:33.296Z"},{"images":[],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[],"_id":"5b77b2d71be4332fbc7055a0","idx":45,"title":"test","content":"asdasdadasdasdasdasdasdasdadasdasdasdasdasdasdadasdasdasdasdavar a = 1;functino(){console.log(11111);}","author":"skydown","category":"front-end","subCategory":"javascript","ip":"8agVS0uWXQYcKOc4PZR3GU5utgxJqiD8s5DFTJHLOZOhKCbldaBoBg/SZAAUuDoyTndqnMnxxYxMF80DGcEJBQ==","view":true,"date":"2018-08-18T05:47:03.719Z","__v":0,"updateDate":"2018-08-22T12:02:11.207Z"},{"images":[],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[],"_id":"5b77afc11be4332fbc70559f","idx":44,"title":"123","content":"q123","author":"skydown","category":"back-end","subCategory":"PHP","ip":"8agVS0uWXQYcKOc4PZR3GU5utgxJqiD8s5DFTJHLOZOhKCbldaBoBg/SZAAUuDoyTndqnMnxxYxMF80DGcEJBQ==","view":true,"date":"2018-08-18T05:33:53.894Z","__v":0},{"images":[],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[],"_id":"5b77afb01be4332fbc70559e","idx":43,"title":"123","content":"123","author":"skydown","category":"front-end","subCategory":"css","ip":"8agVS0uWXQYcKOc4PZR3GU5utgxJqiD8s5DFTJHLOZOhKCbldaBoBg/SZAAUuDoyTndqnMnxxYxMF80DGcEJBQ==","view":true,"date":"2018-08-18T05:33:36.175Z","__v":0},{"images":[],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[],"_id":"5b77af841be4332fbc70559d","idx":42,"title":"123","content":"123","author":"skydown","category":"time-line","subCategory":"","ip":"8agVS0uWXQYcKOc4PZR3GU5utgxJqiD8s5DFTJHLOZOhKCbldaBoBg/SZAAUuDoyTndqnMnxxYxMF80DGcEJBQ==","view":true,"date":"2018-08-18T05:32:52.759Z","__v":0},{"images":[],"files":[],"fixed":false,"complete":false,"auth":false,"reply":[],"_id":"5b4e1e2d4b3ad30934129cdd","idx":38,"title":"script 요소","content":"script 요소HTML script 요소는 실행 가능한 코드를 문서에 포함 시키거나 참조하기 위한 것입니다.일반적으로는 자바스크립트 코드를 문서에 포함하거나 참조하기 위해 사용하나 WebGL의 GLSL 쉐이더 프로그래밍 언어(GLSL shader programming language)와 같은 다른 언어에 대해서도 사용할 수 있습니다.* 출처 :&nbsp;https://developer.mozilla.org/ko/docs/Web/HTML/Element/script","author":"skydown","category":"front-end","subCategory":"html","ip":"2ST9Lj0quGUoyMm1+oEYzFb02PRLWIVy17Kkpx7tsX1PpahrX2KQnBiztD4fW/EiKl7GcxoaqbLERdTqEcb7IQ==","view":true,"date":"2018-07-18T16:49:49.712Z","__v":0},{"images":[],"files":[{"registered":"true","fileName":"1531843912005.zip","fileOriginName":"skycode.1.1.0.zip","size":"3608"}],"fixed":false,"complete":true,"auth":false,"reply":[],"_id":"5b4e154b4b3ad30934129cdb","idx":37,"title":"skycode syntax highlighter","content":"블로그에 사용하려고 만든 syntax highlighter 입니다.History2018-01: 첫 개발2018-06: javascript comment 기능 수정2018-07-17: javascript&nbsp;syntax highlight 기능 수정API기본 구성은 pre&nbsp;&gt;&nbsp;code&nbsp;&gt; p&nbsp; 순으로 코드를 작성합니다.code 안에 p&nbsp;를 기준으로 반복하여 문법을 체크 합니다.&lt;link rel=\"stylesheet\" href=\"css/skycode.css\"&gt;&lt;div class=\"code_box\"&gt;&lt;pre&gt;&lt;code&gt;&lt;p&gt;for(var i = 0; i &amp;lt;= itemLength; i++){&lt;/p&gt;&lt;p&gt;//...&lt;/p&gt;&lt;p&gt;};&lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;css selector 로 함수를 호출해주세요.&lt;script src=\"js/skycode.js\"&gt;&lt;/script&gt;skycode(\".code_box\");html, javascript 문법을 지원하며 자동으로 구문을 분석 합니다.주석은 한 줄 주석만 가능합니다. 코드와 주석은 다른 p 에 작성해주세요.테마는 MDN&nbsp;syntax highlight 테마를 적용하였습니다.아직 오류가 많아 계속 고도화 작업 진행 예정입니다.","author":"skydown","category":"develop","subCategory":"","ip":"2ST9Lj0quGUoyMm1+oEYzFb02PRLWIVy17Kkpx7tsX1PpahrX2KQnBiztD4fW/EiKl7GcxoaqbLERdTqEcb7IQ==","view":true,"date":"2018-07-18T16:11:55.684Z","__v":1,"updateDate":"2018-07-18T16:30:45.472Z"}],
+	"category":"",
+	"subCategory":""
+}
