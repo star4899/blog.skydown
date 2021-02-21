@@ -583,10 +583,8 @@ export default {
 }
 .editor_file{overflow-x:auto; max-height:190px; margin:20px 0; border:1px dashed #ddd;
     input[type=checkbox]{
-        &::after{content:"미등록" !important;}
-        &:checked::after{content:"등록" !important;}
     }
-    .file{max-width:1160px; margin:0 auto; text-align:center; table-layout:fixed;
+    .file{width:100%; max-width:1160px; margin:0 auto; text-align:center; table-layout:fixed;
         th{height:20px; padding:5px 0;}
         td{height:20px; padding:5px 0; border-top:1px solid #efefef; border-bottom:0;}
         tr.red td{color:#eb1e3c;}
