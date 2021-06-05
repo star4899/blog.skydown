@@ -131,10 +131,18 @@ export default {
         },
         change(){
             const findCategory = this.$store.state.category.data.find(val => this.replaceComma(val.text) === this.category);
-            this.subCategory = "";
             if(findCategory){
                 this.subCategoryItem = [...findCategory.sub];
-                if(this.subCategoryItem.length > 0) this.subCategory = this.replaceComma(this.subCategoryItem[0].text);
+                if(this.subCategoryItem.length > 0){
+                    const findSubCategory = this.subCategoryItem.find(item => this.replaceComma(item.text) === this.subCategory);
+                    if(this.subCategory && findSubCategory){
+                        this.subCategory = this.replaceComma(findSubCategory.text);
+                    }else{
+                        this.subCategory = this.replaceComma(this.subCategoryItem[0].text);
+                    };
+                }else{
+                    this.subCategory = "";
+                };
             };
         },
         back(){

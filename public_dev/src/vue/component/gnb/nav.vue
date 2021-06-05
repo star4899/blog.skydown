@@ -2,16 +2,24 @@
     <nav role="navigation">
         <ul>
             <template v-for="(item, index) in $store.state.category.data">
-                <router-link tag="li" :to="item.link" :key="index">
-                    <a role="link">{{item.text}}</a>
-                    <template v-if="item.sub !== null">
-                        <a :href="'#' + item.text + '-sub'" role="button" aria-pressed="false" class="sub_btn btn_default xi xi-caret-down-min" @click.prevent="sub"><span class="ir">{{item.text + '-sub'}}</span></a>
-                        <ul :id="item.text + '-sub'">
-                            <template v-for="(t, i) in item.sub">
-                                <router-link tag="li" :to="t.link" :key="i"><a role="link">{{t.text}}</a></router-link>
-                            </template>
-                        </ul>
-                    </template>
+                <router-link v-slot="{route, navigate, isExactActive}" :to="item.link" :key="index" custom>
+                    <li :class="[{on : isExactActive}]">
+                        <a role="link" :href="route.path" @click="navigate">{{item.text}}</a>
+                        <template v-if="item.sub.length > 0">
+                            <a role="button" aria-pressed="false" class="sub_btn btn_default xi xi-caret-down-min" :href="`#${item.text}-sub`" @click.prevent="sub">
+                                <span class="ir">{{`${item.text}-sub`}}</span>
+                            </a>
+                            <ul :id="`${item.text}-sub`">
+                                <template v-for="(t, i) in item.sub">
+                                    <router-link v-slot="{route, navigate, isExactActive}" :to="t.link" :key="i" custom>
+                                        <li :class="[{on : isExactActive}]">
+                                            <a role="link" :href="route.path" @click="navigate">{{t.text}}</a>
+                                        </li>
+                                    </router-link>
+                                </template>
+                            </ul>
+                        </template>
+                    </li>
                 </router-link>
             </template>
         </ul>
@@ -21,10 +29,10 @@
 export default {
     methods : {
         sub(e){
-            if(e.currentTarget.getAttribute("aria-pressed") === "false"){
-                e.currentTarget.setAttribute("aria-pressed", "true");
+            if(e.currentTarget.ariaPressed === "false"){
+                e.currentTarget.ariaPressed = "true";
             }else{
-                e.currentTarget.setAttribute("aria-pressed", "false");
+                e.currentTarget.ariaPressed = "false";
             };
         }
     }

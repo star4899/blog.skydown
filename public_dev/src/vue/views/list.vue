@@ -3,12 +3,15 @@
         <template v-if="data.post.length > 0">
             <template v-for="(item, index) in data.post">
                 <article role="article" :class="{not_complete : !item.complete}" :key="index">
-                    <router-link :to="item.subCategory !== '' ? '/' + item.category + '/' + item.subCategory + '/' + item.idx : '/' + item.category + '/' + item.idx" role="link" :class="{figure : item.images.length > 0}">
+                    <router-link role="link" :to="item.subCategory !== '' ? `/${item.category}/${item.subCategory}/${item.idx}` : `/${item.category}/${item.idx}`" :class="{img : item.images.length > 0}">
                         <h2>{{item.title}}</h2>
                         <template v-if="item.images.length > 0">
-                            <figure :style="{backgroundImage : 'url(/upload/' + item.images[0].imgName + ')'}">
-                                <img :src="'/upload/' + item.images[0].imgName" width="170" alt="">
-                            </figure>
+                            <picture>
+                                <div class="thumbnail" :style="{backgroundImage : `url(/upload/${item.images[0].imgName})`}">
+                                    <source srcset="/media/cc0-images/surfer-240-200.jpg" media="(min-width: 800px)">
+                                    <img class="ir" :src="`/upload/${item.images[0].imgName}`" width="170" alt="">
+                                </div>
+                            </picture>
                         </template>
                         <p>{{item.content}}</p>
                     </router-link>
@@ -79,9 +82,7 @@ export default {
         }
         h2{overflow:hidden; margin-bottom:10px; font-family:"Noto Sans"; font-size:25px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
         &.not_complete h2{color:#aaa;}
-        figure{max-width:100%; max-height:130px; background-position:center center; background-repeat:no-repeat; background-size:cover; outline:1px solid #eee; outline-offset:-1px;
-            img{position:absolute; left:-10000em; top:0; max-width:100%;}
-        }
+        .thumbnail{max-width:100%; max-height:130px; background-position:center center; background-repeat:no-repeat; background-size:cover; outline:1px solid #eee; outline-offset:-1px;}
         p{overflow:hidden; display:-webkit-box; min-height:40px; margin-bottom:10px; font-size:15px; line-height:150%; text-overflow:ellipsis; color:#333; -webkit-box-orient:vertical; word-break:break-all;}
         dl{overflow:hidden; color:#bbb}
         dt{float:left; margin-right:5px; padding-top:2px; margin-left:20px;
@@ -96,9 +97,9 @@ export default {
     .list{
         article{
             a{margin-bottom:20px;
-                &.figure{position:relative; padding-left:190px; min-height:130px;}
+                &.img{position:relative; padding-left:190px; min-height:130px;}
             }
-            figure{position:absolute; left:0; top:0; width:170px; height:130px; margin-right:20px;}
+            .thumbnail{position:absolute; left:0; top:0; width:170px; height:130px; margin-right:20px;}
             p{max-height:90px; -webkit-line-clamp:4;}
         }
     }
@@ -107,7 +108,7 @@ export default {
     .list{
         article{
             a{margin-bottom:10px;}
-            figure{float:left; width:110px; height:110px; margin-right:10px;}
+            .thumbnail{float:left; width:110px; height:110px; margin-right:10px;}
             p{max-height:110px; -webkit-line-clamp:5;}
         }
     }

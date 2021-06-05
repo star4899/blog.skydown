@@ -20,7 +20,8 @@ module.exports = () => ({
         contentBase : path.join(__dirname, "/public"),
         disableHostCheck : true,
         before(app, server){
-            app.get(/^(\/$|\/skydown|\/time-line|\/front-end|\/back-end|\/develop|\/write$\/modify\/\d+$|\/login$|\/search)/, (req, res) => {
+            app.get(/^\/(?!api)(([^\.]+)?(\/[^\.]+))?$/, (req, res) => {
+                console.log(req.url)
                 fs.readFile(path.join(__dirname, "../public_dev/index.html"), "utf8", (err, data) => {
                     res.send(injectResource(data));
                 });

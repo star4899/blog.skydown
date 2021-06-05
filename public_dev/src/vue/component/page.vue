@@ -1,6 +1,6 @@
 <template>
     <nav role="navigation" id="pagination" v-if="prop.data !== null && maxPage > 1">
-        <router-link :to="{path : $route.path, query : {page : prevPage}}" :role="'link'" :class="'page_btn xi xi-angle-left-min'" v-if="prop.data.page && prop.data.page > 1">
+        <router-link role="link" v-if="prop.data.page && prop.data.page > 1" :to="{path : $route.path, query : {page : prevPage}}" :class="'page_btn xi xi-angle-left-min'">
             <span class="ir">이전 페이지</span>
         </router-link>
         <span class="page_btn xi xi-angle-left-min" v-else><span class="ir">이전 페이지</span></span>
@@ -8,7 +8,7 @@
             <input type="number" min="1" :max="maxPage" :value="currentPage" @input="input" @blur="blur" ref="input">/<span id="total-page">{{maxPage}}</span>
             <button type="button" role="button" class="btn_default xi xi-search" @click.stop="pageBtn" ><span class="ir">이동</span></button>
         </span>
-        <router-link :to="{path : $route.path, query : {page : nextPage}}" :role="'link'" :class="'page_btn xi xi-angle-right-min'" v-if="currentPage < maxPage">
+        <router-link role="link" v-if="currentPage < maxPage" :to="{path : $route.path, query : {page : nextPage}}" :class="'page_btn xi xi-angle-right-min'">
             <span class="ir">다음 페이지</span>
         </router-link>
         <span class="page_btn xi xi-angle-right-min" v-else><span class="ir">다음 페이지</span></span>

@@ -12,7 +12,7 @@
                     <span><time :datetime="dateFormat(post.date)">{{dateFormat(post.date)}}</time></span>
                 </div>
                 <div class="category_info">
-                    <span><router-link :to="'/' + (post.subCategory !== '' ? post.category + '/' + post.subCategory : post.category)" role="link">{{post.subCategory !== '' ? post.subCategory : post.category}}</router-link></span>
+                    <span><router-link role="link" :to="`/${post.subCategory !== '' ? post.category + '/' + post.subCategory : post.category}`">{{post.subCategory !== '' ? post.subCategory : post.category}}</router-link></span>
                     <span :class="{auth_true : post.auth}">{{post.auth ? '비공개' : '전체공개'}}</span>
                 </div>
                 <div id="view_body" class="view_body" v-html="post.content"></div>
