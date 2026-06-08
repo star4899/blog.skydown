@@ -16,36 +16,9 @@
 <link rel="apple-touch-icon" href="/src/images/favicon-152.png">
 <link rel="shortcut icon" href="/src/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="/src/style/blog.css">
-<script>
-window.recaptchaCallback = function(){
-    console.log("recaptchaCallback");
-};
-window.recaptchaExpiredCallback = function(){
-    console.log("recaptchaExpiredCallback");
-};
-window.recaptchaErrorCallback = function(){
-    console.log("recaptchaErrorCallback");
-};
-window.grecaptchaOBJ = null;
-window.onloadCallback = function(){
-    const recaptchaOBJECT = document.querySelector("#recaptcha");
-    if(recaptchaOBJECT){
-        if(window.grecaptchaOBJ === null){
-            window.grecaptchaOBJ = 0;
-            window.grecaptchaOBJ = window.grecaptcha.render("recaptcha", {
-                "sitekey" : "6LdWTkwUAAAAACivmtEc3nfpHDJAWU4tQRvKFW5-",
-                "callback" : recaptchaCallback,
-                "expired-callback" : recaptchaExpiredCallback,
-                "error-callback" : recaptchaErrorCallback
-            });
-        };
-    };
-};
-</script>
 </head>
 <body>
     <section id="wrap"></section>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="/src/blog.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const webpack = require("webpack");
 
 function injectResource(html){
     let h = html.toString();
@@ -10,29 +9,34 @@ function injectResource(html){
 };
 
 module.exports = () => ({
-    plugins : [
-        new webpack.HotModuleReplacementPlugin(),
-    ],
     devServer : {
+        host : "127.0.0.1",
         port : 8080,
         compress : true,
-        index : "index.html",
-        contentBase : path.join(__dirname, "/public"),
-        disableHostCheck : true,
-        before(app, server){
-            app.get(/^\/(?!api)(([^\.]+)?(\/[^\.]+))?$/, (req, res) => {
-                console.log(req.url)
+        hot : true,
+        allowedHosts : "all",
+        static : {
+            directory : path.join(__dirname, "../public")
+        },
+        setupMiddlewares(middlewares, devServer){
+            devServer.app.get(/^\/(?!api)(([^\.]+)?(\/[^\.]+))?$/, (req, res) => {
+                console.log(req.url);
                 fs.readFile(path.join(__dirname, "../public_dev/index.html"), "utf8", (err, data) => {
+                    if(err){
+                        res.status(500).send(err.message);
+                        return;
+                    };
                     res.send(injectResource(data));
                 });
             });
+            return middlewares;
         },
         proxy : [
             {
                 context : ["/api", "/loginCheck", "/upload", "/temp"],
                 target : "http://localhost",
-                changeOrigin : true,
+                changeOrigin : true
             }
-        ],
+        ]
     }
 });

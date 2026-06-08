@@ -22,9 +22,9 @@ export default {
         this.loginCheck();
     },
     mounted(){
-        if(window.grecaptcha && window.grecaptcha.render){
-            this.$nextTick(window.onloadCallback);
-        };
+        this.$nextTick(() => {
+            this.loadRecaptcha();
+        });
     },
     updated(){
         if(window.grecaptcha && window.grecaptcha.render){
@@ -69,6 +69,39 @@ export default {
             .catch(e => {
                 console.log(e);
             });
+        },
+        loadRecaptcha(){
+          window.recaptchaCallback = function(){
+              console.log("recaptchaCallback");
+          };
+          window.recaptchaExpiredCallback = function(){
+              console.log("recaptchaExpiredCallback");
+          };
+          window.recaptchaErrorCallback = function(){
+              console.log("recaptchaErrorCallback");
+          };
+          window.grecaptchaOBJ = null;
+          window.onloadCallback = function(){
+              const recaptchaOBJECT = document.querySelector("#recaptcha");
+              if(recaptchaOBJECT){
+                  if(window.grecaptchaOBJ === null){
+                      window.grecaptchaOBJ = 0;
+                      window.grecaptchaOBJ = window.grecaptcha.render("recaptcha", {
+                          "sitekey" : "6LdWTkwUAAAAACivmtEc3nfpHDJAWU4tQRvKFW5-",
+                          "callback" : recaptchaCallback,
+                          "expired-callback" : recaptchaExpiredCallback,
+                          "error-callback" : recaptchaErrorCallback
+                      });
+                  };
+              };
+          };
+          this.loadScript("grecaptcha", "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit")
+          .then(() => {
+              if(window.grecaptcha && window.grecaptcha.render){
+                  this.$nextTick(window.onloadCallback);
+              };
+          })
+          .catch(console.error);
         }
     }
 };

@@ -98,6 +98,20 @@ export default {
                 console.log(e)
             };
         };
+        Vue.prototype.loadScript = function(id, src){
+          return new Promise((resolve, reject) => {
+            const $el = document.querySelector(id);
+              if($el){
+                  $el.remove();
+              };
+              const $script = document.createElement("script");
+              $script.id = id;
+              $script.src = src;
+              $script.onload = resolve;
+              $script.onload = reject;
+              document.body.append($script);
+          });
+        };
         Vue.mixin({
             methods : {
                 inputHandler(e, targetName){

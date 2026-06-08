@@ -10,15 +10,17 @@ import "src/style/common.scss";
 
 import Vue from "vue";
 import store from "@/store/index";
+
+
+
 import plugin from "@/plugin/index";
+Vue.use(plugin);
 
 // import Ads from "vue-google-adsense";
 // Vue.use(Ads.Adsense);
 // Vue.use(Ads.InArticleAdsense);
 // Vue.use(Ads.InFeedAdsense);
 
-
-Vue.use(plugin);
 import main from "@/main.vue";
 import router from "@/router/index";
 Vue.prototype.$EventBus = new Vue();

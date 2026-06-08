@@ -87,7 +87,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "~src/style/comment.scss";
+@use "src/style/comment.scss" as *;
 @include comment{
     .comment_write{padding-top:10px; border-top:1px solid #666;
         .comment{position:relative; padding:10px 0;}

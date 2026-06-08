@@ -4,6 +4,7 @@ const {merge} = require("webpack-merge");
 const {VueLoaderPlugin} = require("vue-loader");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const devConfig = require("./webpack-config/webpack.dev.config");
 const buildConfig = require("./webpack-config/webpack.build.config");
@@ -17,6 +18,13 @@ module.exports = (env, option) => {
         output : {
             filename : "src/[name].js",
             path : path.resolve(__dirname + "/public"),
+            clean : true
+        },
+        optimization : {
+            minimizer : [
+                "...",
+                new CssMinimizerPlugin()
+            ]
         },
         module : {
             rules : [
@@ -35,29 +43,26 @@ module.exports = (env, option) => {
                         MiniCssExtractPlugin.loader,
                         "css-loader",
                         "postcss-loader",
-                        "sass-loader"
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                implementation: require("sass")
+                            }
+                        }
                     ]
                 },
                 {
                     test : /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
-                    loader : "file-loader",
-                    options: {
-                        name : "[name].[ext]",
-                        outputPath : "src/images",
-                        publicPath : (url, resourcePath, context) => {
-                            return `../images/${url}`;
-                        }
+                    type : "asset/resource",
+                    generator : {
+                        filename : "src/images/[name][ext]"
                     }
                 },
                 {
                     test : /\.(woff2?)?$/,
-                    loader : "file-loader",
-                    options: {
-                        name : "[name].[ext]",
-                        outputPath : "src/fonts",
-                        publicPath : (url, resourcePath, context) => {
-                            return `../fonts/${url}`;
-                        }
+                    type : "asset/resource",
+                    generator : {
+                        filename : "src/fonts/[name][ext]"
                     }
                 },
             ]
@@ -67,12 +72,14 @@ module.exports = (env, option) => {
             new MiniCssExtractPlugin({
                 filename: "src/style/[name].css"
             }),
-            new CopyWebpackPlugin([
-                {
-                    from : "./public_dev/manifest.json",
-                    to : "./manifest.json"
-                }
-            ]),
+            new CopyWebpackPlugin({
+                patterns : [
+                    {
+                        from : "./public_dev/manifest.json",
+                        to : "./manifest.json"
+                    }
+                ]
+            }),
             new webpack.DefinePlugin({
                 "process.env" : {
                     MODE : `'${option.mode}'`
