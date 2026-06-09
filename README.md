@@ -10,3 +10,7 @@ $npm run dev
 # webpack build
 $npm run build
 ```
+
+## deploy
+
+[blog.skydown_server](https://github.com/star4899/blog.skydown_server) 배포시 같이 배포 진행됨
